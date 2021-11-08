@@ -1,0 +1,13 @@
+.nav {
+  padding: 15px 100px;
+
+  &__logo {
+    padding-top: 15px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+  }
+}
