@@ -1,0 +1,141 @@
+.hero {
+  height: 900px;
+  background-color: #515151;
+  background-image: url("./../../images/hero.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
+
+  &__input {
+    margin-top: 190px;
+    width: 610px;
+    height: 64px;
+    border: none;
+    background: #f5f5fa;
+    box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5),
+      inset 2px 2px 4px rgba(170, 170, 204, 0.25),
+      inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #ffffff;
+    border-radius: 40px;
+    outline: none;
+    padding: 16px 34px;
+  }
+
+  &__title {
+    padding-top: 32px;
+    font-size: 48px;
+  }
+
+  &__text {
+    margin-top: 15px;
+    font-size: 36px;
+  }
+}
+
+.slider {
+  padding: 30px 80px;
+  color: white;
+
+  &__title {
+    padding-top: 100px;
+  }
+
+  &__card {
+    width: 223px;
+    height: 280px;
+    border-radius: 8px;
+
+    &--surfing {
+      background-image: url("./../../images/surfing-card.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &--tennis {
+      background-image: url("./../../images/tennis-card.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &--swimming {
+      background-image: url("./../../images/swimming-card.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &--riding {
+      background-image: url("./../../images/riding-card.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &--golf {
+      background-image: url("./../../images/golf-card.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &--soccer {
+      background-image: url("./../../images/soccer-card.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &--table-tennis {
+      background-image: url("./../../images/table-tennis-card.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}
+
+.coaches {
+  margin: auto;
+
+  &__title {
+    padding-top: 90px;
+  }
+
+  &__text {
+    padding-top: 30px;
+    padding-bottom: 90px;
+    width: 1000px;
+    padding-left: 30%;
+  }
+
+  &__container {
+    display: flex;
+    padding: 100px 0;
+    justify-content: space-around;
+    background-image: url("./../../images/triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__card {
+    width: 342px;
+    border: 2px solid #f4c300;
+    border-radius: 20px;
+    padding: 20px;
+
+    & h3,
+    & p {
+      padding-top: 20px;
+    }
+
+    & p {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.testiomonials {
+  padding: 119px 50px 100px;
+
+  &__title {
+    padding-bottom: 50px;
+  }
+
+  &__text {
+    padding-top: 30px;
+  }
+}
