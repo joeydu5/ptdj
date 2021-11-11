@@ -1,5 +1,6 @@
 .nav {
   padding: 15px 100px;
+  background-color: black;
 
   &__logo {
     padding-top: 15px;
@@ -8,6 +9,7 @@
   &__list {
     display: flex;
     justify-content: space-between;
-    vertical-align: middle;
+    // vertical-align: middle;
+    align-items: center;
   }
 }

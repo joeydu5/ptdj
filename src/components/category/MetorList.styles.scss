@@ -1,0 +1,69 @@
+.mentorlist {
+  height: 300px;
+  //   background-color: skyblue;
+  border-radius: 30px;
+  border: 3px solid #c4c4c4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 40px;
+  margin-bottom: 50px;
+
+  &__left {
+    margin-right: 70px;
+
+    img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__right {
+    // background-color: pink;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    p {
+      font-size: 22px;
+    }
+
+    &__head {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+
+      h3 {
+        font-size: 25px;
+      }
+      &__link1 {
+        border: 3px solid #009f3d;
+        width: 180px;
+        padding: 8px 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: BLACK;
+        text-align: center;
+        margin-right: -200px;
+      }
+
+      &__link2 {
+        border: 3px solid #009f3d;
+        padding: 8px 5px;
+        width: 180px;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #009f3d;
+        text-align: center;
+      }
+    }
+  }
+}
