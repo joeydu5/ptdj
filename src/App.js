@@ -5,6 +5,7 @@ import Nav from "./components/nav/Nav";
 import Tennis from "./pages/category/Tennis";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/footer";
+import Contact from "./pages/contact/contact";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tennis" element={<Tennis />} />
+        <Route path="/contact" element={<Contact />} />
         {/* <Route exact path="/" components={Home} /> */}
         {/* <Route exact path="/" components={Home} /> */}
       </Routes>

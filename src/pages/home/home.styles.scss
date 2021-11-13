@@ -138,6 +138,8 @@
   background-image: url("./../../images/how_bg.png");
   background-repeat: no-repeat;
   background-position: center center;
+  width: 100%;
+  object-fit: cover;
   color: white;
   text-align: center;
   min-height: 731px;
