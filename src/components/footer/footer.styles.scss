@@ -1,6 +1,7 @@
 .footer {
-  background: #f4c300;
+  background: #006a29;
   padding: 0 50px;
+  color: white;
 
   &__container {
     display: flex;
@@ -19,6 +20,8 @@
   }
 
   &__copyright {
+    color: white;
+    text-align: center;
     padding-top: 30px;
     border-top: 1px solid #0085c7;
   }

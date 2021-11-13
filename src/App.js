@@ -4,8 +4,7 @@ import Home from "./pages/home/Home";
 import Nav from "./components/nav/Nav";
 import Tennis from "./pages/category/Tennis";
 import { Route, Routes } from "react-router-dom";
-import Footer from "./components/footer/Footer";
-// import Home2 from "./pages/home/Home2";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
