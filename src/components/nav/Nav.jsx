@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./nav.styles.scss";
 
 const Nav = () => {
@@ -22,7 +23,7 @@ const Nav = () => {
           </a>
         </li>
         <li>
-          <a href="www.google.com">
+          <Link to="/register">
             <svg
               width="55"
               height="56"
@@ -35,7 +36,7 @@ const Nav = () => {
                 fill="white"
               />
             </svg>
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
