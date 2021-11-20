@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./MetorList.styles.scss";
 
 function MentorList(props) {

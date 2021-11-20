@@ -1,6 +1,6 @@
-
 import React from "react";
 import "./footer.styles.scss";
+import { Link } from "react-router-dom";
 import SignFooter from './../../images/sign_footer.svg';
 import  insta from './../../images/instagram.svg';
 import  twitter from './../../images/twitter.svg';
@@ -27,7 +27,7 @@ const Footer = ()=> {
                 <p>Become A Coach</p>
                 <p>About Us</p>
                 <p>How It Works</p>
-                <p>Contact Us</p>
+                <Link to="/contact"><p>Contact Us</p></Link>
             </div>
 
             <div className="footer__about">
