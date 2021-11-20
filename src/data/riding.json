@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "category": "Horse riding",
+    "firstname": "Sarah",
+    "lastname": "Davies",
+    "star": 5,
+    "image": "https://i.ibb.co/yYVpcJm/1-ride.png",
+    "rates": "15$/h",
+    "city": "Liverpool",
+    "contact": {
+      "mobile": "04594635254",
+      "email": "sarah@tennisport.com"
+    },
+    "qualification": "Certificate IV in Sport Coaching",
+    "intro": "I base my classes on a case by case basis, I understand that people may carry injuries or limitations that require their position to be modified and their lessons adjusted. No specific level of riding is required nor any specific experience.",
+    "video": "https://www.youtube.com/embed/YqgcykDGB2A",
+    "testimonial": [
+      "excellent coach",
+      "very reasonable price1",
+      "very reasonable price2",
+      "very reasonable price3",
+      "very reasonable price4"
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Horse riding",
+    "firstname": "Jules",
+    "lastname": "Fletcher",
+    "star": 4.5,
+    "image": "https://i.ibb.co/G9RcLVN/2-ride.png",
+    "rates": "34$/h",
+    "city": "Berowra",
+    "contact": {
+      "mobile": "04594635254",
+      "email": "jules@tennisport.com"
+    },
+    "qualification": "Certificate IV in Sport Coaching",
+    "intro": "My approch is based on horse-human relationship, first step is to know each other, learn how to communicate to then gain each other's trust. No 2 people are the same, so I respect individuals time and limits to go foward.",
+    "video": "https://www.youtube.com/embed/YqgcykDGB2A",
+    "testimonial": [
+      "excellent coach",
+      "very reasonable price1",
+      "very reasonable price2",
+      "very reasonable price3",
+      "very reasonable price4"
+    ]
+  }
+  ,
+  {
+    "id": 3,
+    "category": "Horse riding",
+    "firstname": "Kaylee",
+    "lastname": "Harris",
+    "star": 4,
+    "image": "https://i.ibb.co/nDb26n2/3-ride.png",
+    "rates": "20$/h",
+    "city": "Richmond",
+    "contact": {
+      "mobile": "04594635254",
+      "email": "kaylee@tennisport.com"
+    },
+    "qualification": "Certificate IV in Sport Coaching",
+    "intro": "Learn how to care for your new horse and everything that comes with them. Teaching you and your horse how to catch, lead and lunge as well as feeding, rugging, floating, hoof care, brushing, saddling, gear care, appropriate yards and more. Create a real bond with your horse or pony.",
+    "video": "https://www.youtube.com/embed/YqgcykDGB2A",
+    "testimonial": [
+      "excellent coach",
+      "very reasonable price1",
+      "very reasonable price2",
+      "very reasonable price3",
+      "very reasonable price4"
+    ]
+  }
+]

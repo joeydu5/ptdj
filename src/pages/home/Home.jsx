@@ -30,21 +30,29 @@ const Home = () => {
             </div>
           </Link>
 
+<Link to="/swimming">
           <div className="slider__card slider__card--swimming">
             <h3 className="slider__title">Swimming</h3>
           </div>
+          </Link>
 
-          <div className="slider__card slider__card--golf">
-            <h3 className="slider__title">Golf</h3>
-          </div>
+          <Link to="/golf">
+            <div className="slider__card slider__card--golf">
+              <h3 className="slider__title">Golf</h3>
+            </div>
+          </Link>
 
+          <Link to="/soccer">
           <div className="slider__card slider__card--soccer">
             <h3 className="slider__title">Soccer</h3>
           </div>
+          </Link>
 
-          <div className="slider__card slider__card--table-tennis">
-            <h3 className="slider__title">Table-tennis</h3>
+          <Link to="/riding">
+          <div className="slider__card slider__card--riding">
+            <h3 className="slider__title">Horse-riding</h3>
           </div>
+          </Link>
         </Carousel>
       </section>
 

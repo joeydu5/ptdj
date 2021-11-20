@@ -1,19 +1,19 @@
 [
   {
     "id": 1,
-    "category": "tennis",
-    "firstname": "Jessica",
+    "category": "soccer",
+    "firstname": "Daniel",
     "lastname": "Blake",
     "star": 5,
-    "image": "https://i.ibb.co/s9JQKwg/1-tennis.png",
+    "image": "https://i.ibb.co/NNdkNcL/1-soccer.png",
     "rates": "40$/h",
-    "city": "Alexandria",
+    "city": "Glebe",
     "contact": {
       "mobile": "04594635254",
       "email": "jessica@tennisport.com"
     },
     "qualification": "Certificate IV in Sport Coaching",
-    "intro": "Lessons can vary in length from 20-45 minutes depending on ability and fitness of horse and rider at the end of the day it should be fun, not knackering while learning lots of new things.",
+    "intro": "I think it is very important for players to feel confident on the field. Once I have pinpointed your weaknesses, I will help you understand the problems your having so that they will eventually become you strength!",
     "video": "https://www.youtube.com/embed/YqgcykDGB2A",
     "testimonial": [
       "excellent coach",
@@ -25,19 +25,19 @@
   },
   {
     "id": 2,
-    "category": "tennis",
-    "firstname": "Mitchell",
+    "category": "soccer",
+    "firstname": "Alec",
     "lastname": "Nellar",
     "star": 4.5,
-    "image": "https://i.ibb.co/vm1NCxW/2-tennis.png",
+    "image": "https://i.ibb.co/nfZXnrG/2-soccer.png",
     "rates": "34$/h",
-    "city": "Darlinghurst",
+    "city": "Eveleigh",
     "contact": {
       "mobile": "04594635254",
       "email": "mitchell@tennisport.com"
     },
     "qualification": "Certificate IV in Sport Coaching",
-    "intro": "I approach my lessons depending on the player. Some just want to have fun while others want to improve to a high level. Can be very technical or tactical gameplay and working on staying consistent",
+    "intro": "Learn all the skills you need to be a complete soccer player and also develope the cognitive abilities you need in a court like atention, peripheral vision and reaction speed.Lessons are fun, intense and entertaining. The more you touch the ball, the more you learn and enjoy, but we don't forget about the physical training either!",
     "video": "https://www.youtube.com/embed/YqgcykDGB2A",
     "testimonial": [
       "excellent coach",
@@ -50,19 +50,19 @@
   ,
   {
     "id": 3,
-    "category": "tennis",
-    "firstname": "Jenny",
+    "category": "soccer",
+    "firstname": "Mehmet",
     "lastname": "Jones",
     "star": 4,
-    "image": "https://i.ibb.co/Dr7YhVN/3-tennis.png",
+    "image": "https://i.ibb.co/x5BxZhm/3-soccer.png",
     "rates": "20$/h",
-    "city": "Erskineville",
+    "city": "Chippendale",
     "contact": {
       "mobile": "04594635254",
       "email": "jennyjones@tennisport.com"
     },
     "qualification": "Certificate IV in Sport Coaching",
-    "intro": "Technique oriented approach to master the sport of tennis with focus on fitness. Easy and fast way to be a good player",
+    "intro": "My sessions will focus on Injury prevention, Athletic Development, Power and Speed Development along with Soccer Specific Drills",
     "video": "https://www.youtube.com/embed/YqgcykDGB2A",
     "testimonial": [
       "excellent coach",
