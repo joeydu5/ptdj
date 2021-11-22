@@ -1,7 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./MetorList.styles.scss";
 
 function MentorList(props) {
+  const { setUserdata } = props;
+
   const { image, firstname, star, city, intro, rates } = props.each;
   return (
     <div className="mentorlist">
@@ -18,7 +21,14 @@ function MentorList(props) {
         <div className="mentorlist__right__bottom">
           <h3>Rate: {rates}</h3>
           <p className="mentorlist__right__bottom__link1">SEND EMAIL</p>
-          <p className="mentorlist__right__bottom__link2">VIEW PROFILE</p>
+          <Link to="/profile">
+            <p
+              className="mentorlist__right__bottom__link2"
+              onClick={() => setUserdata(props.each)}
+            >
+              VIEW PROFILE
+            </p>
+          </Link>
         </div>
       </div>
     </div>
