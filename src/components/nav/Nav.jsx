@@ -28,7 +28,7 @@ const Nav = () => {
         />
       )}
       <ul className="nav__list">
-        <li className="nav__logo">
+        <li>
           <a href="/">
             <svg
               width="168"
@@ -43,7 +43,13 @@ const Nav = () => {
               />
             </svg>
           </a>
-        </li>
+          </li>
+
+          <li><a href="/">Home</a></li>
+
+          <li><a href="/contact">Contact us</a></li>
+      </ul>
+      <ul>
         <li> {user ? "Welcome:" + user.email : ""}</li>
         <li
           onClick={() => {
