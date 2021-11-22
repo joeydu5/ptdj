@@ -45,10 +45,14 @@ function Profile(props) {
           <p>{qualification}</p>
           <p>Rates: {rates}</p>
           </div>
+ main
         </div>
         <div className="right">
           <h3>{firstname} {lastname}</h3>
           <div className="right__video">
+
+//           <div className="profile__body__right__video">
+
             <iframe
               src={video}
               width="600"

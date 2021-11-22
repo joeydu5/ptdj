@@ -11,6 +11,8 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/footer";
 import Contact from "./pages/contact/contact";
 import Profile from "./pages/profile/Profile";
+import Login from "./pages/login/Login";
+import SignUp from "./pages/login/SignUp";
 
 function App() {
   const [userdata, setUserdata] = useState({
@@ -38,6 +40,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tennis" element={<Tennis setUserdata={setUserdata} />} />
+
         <Route path="/golf" element={<Golf setUserdata={setUserdata} />} />
         <Route path="/soccer" element={<Soccer setUserdata={setUserdata} />} />
         <Route
@@ -48,7 +51,8 @@ function App() {
         <Route
           path="/contact"
           element={<Contact setUserdata={setUserdata} />}
-        />
+        />       
+
         <Route path="/profile" element={<Profile userdata={userdata} />} />
       </Routes>
       <Footer />
