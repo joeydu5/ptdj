@@ -67,9 +67,14 @@
   width: 50%;
 
   & h3 {
-    font-size: 80px;
-    font-weight: 500px;
+    margin-top: 30px;
+    font-weight: 900;
+    font-size: 48px;
     color: white;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
+  }
+
+  &__video {
+    margin-bottom: 40px;
   }
 }

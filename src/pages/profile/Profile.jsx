@@ -49,7 +49,12 @@ function Profile(props) {
         <div className="right">
           <h3>{firstname} {lastname}</h3>
           <div className="right__video">
-            <img src={video} alt="video" />
+            <iframe
+              src={video}
+              width="600"
+              height="400"
+              frameborder="0"
+            ></iframe>
           </div>
           <h2 className="profile__title">Meet Your Instructor:</h2>
           <p>{intro}</p>
