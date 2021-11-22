@@ -46,6 +46,10 @@
     font-style: italic;
     margin-bottom: 40px;
     color: black;
+
+    & p {
+      margin-bottom: 10px;
+    }
   }
 
   &__contact {
