@@ -1,10 +1,10 @@
 import React from "react";
 import "./home.styles.scss";
 import { Carousel } from "@trendyol-js/react-carousel";
-import coach from "./../../images/coach.png";
 import person from "./../../images/person.png";
 import { Link } from "react-router-dom";
-import Button from "../../components/button/button";
+import data from "../../data/tennis.json";
+import HomeMentorList from "../../components/homeMentorList/homeMentorList";
 
 const Home = () => {
   return (
@@ -30,7 +30,7 @@ const Home = () => {
             </div>
           </Link>
 
-<Link to="/swimming">
+          <Link to="/swimming">
           <div className="slider__card slider__card--swimming">
             <h3 className="slider__title">Swimming</h3>
           </div>
@@ -69,38 +69,15 @@ const Home = () => {
         </p>
 
         <div className="coaches__container">
-          <div className="coaches__card">
-            <img src={coach} alt="Coach" />
-            <h3>Jessica</h3>
-            <p>
-              Lessons can vary in length from 20-45 minutes depending on ability
-              and fitness of horse and rider at the end of the day it should be
-              fun, not knackering while learning lots of new things.
-            </p>
-            <Button props="READ MORE"/>
-          </div>
 
-          <div className="coaches__card">
-            <img src={coach} alt="Coach" />
-            <h3>Jessica</h3>
-            <p>
-              Lessons can vary in length from 20-45 minutes depending on ability
-              and fitness of horse and rider at the end of the day it should be
-              fun, not knackering while learning lots of new things.
-            </p>
-            <Button props="READ MORE"/>
-          </div>
+            {data.map((each, index) => {
+              return (
+                <div key={index}>
+                  <HomeMentorList each={each} />
+                </div>
+              );
+            })}
 
-          <div className="coaches__card">
-            <img src={coach} alt="Coach" />
-            <h3>Jessica</h3>
-            <p>
-              Lessons can vary in length from 20-45 minutes depending on ability
-              and fitness of horse and rider at the end of the day it should be
-              fun, not knackering while learning lots of new things.
-            </p>
-            <Button props="READ MORE"/>
-          </div>
         </div>
       </section>
 
