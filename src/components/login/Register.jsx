@@ -1,18 +1,48 @@
 import React from "react";
 import { useState } from "react";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../auth/firebase-config.js";
 import "./Login.styles.scss";
 
-function Register() {
+function Register(props) {
+  const { isRegisterOn, setIsRegisterOn } = props;
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
-  const signup = async () => {};
+  console.log(registerEmail);
+  //   const [loginEmail, setLoginEmail] = useState("");
+  //   const [loginPassword, setLoginPassword] = useState("");
+
+  const signup = async (event) => {
+    event.preventDefault();
+    try {
+      const user = await createUserWithEmailAndPassword(
+        auth,
+        registerEmail,
+        registerPassword
+      );
+      console.log(user);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+  //   const login = async () => {};
+  //   const logout = async () => {};
 
   return (
     <div>
-      <div className="register">
+      <div className={`register ${isRegisterOn ? "hide" : ""}`}>
         <div className="register__head"></div>
         <div className="register__body">
-          <form action="">
+          <form onSubmit={signup}>
+            <div className="register__delete">
+              <span
+                onClick={() => {
+                  setIsRegisterOn(true);
+                }}
+              >
+                delete
+              </span>
+            </div>
             <div className="register_div">
               <label htmlFor="sport_cate">
                 What Sport do you need help with?

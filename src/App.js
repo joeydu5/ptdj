@@ -5,7 +5,7 @@ import Nav from "./components/nav/Nav";
 import Tennis from "./pages/category/Tennis";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
-import Register from "./pages/login/Register";
+import Register from "./components/login/Register.jsx";
 // import Home2 from "./pages/home/Home2";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tennis" element={<Tennis />} />
-        <Route path="/register" element={<Register />} />
+        {/* <Route path="/register" element={<Register />} /> */}
         {/* <Route exact path="/" components={Home} /> */}
       </Routes>
       <Footer />

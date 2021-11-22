@@ -11,5 +11,26 @@
     justify-content: space-between;
     // vertical-align: middle;
     align-items: center;
+    color: white;
+  }
+
+  &__register {
+    position: absolute;
+    top: 120px;
+    width: 65%;
+    margin: auto;
+    // position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__login {
+    position: absolute;
+    top: 120px;
+    width: 65%;
+    margin: auto;
+    // position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
