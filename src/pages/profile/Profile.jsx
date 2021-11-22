@@ -39,7 +39,12 @@ function Profile(props) {
             <span>{lastname}</span>
           </div>
           <div className="profile__body__right__video">
-            <img src={video} alt="video" />
+            <iframe
+              src={video}
+              width="600"
+              height="400"
+              frameborder="0"
+            ></iframe>
           </div>
         </div>
       </div>
