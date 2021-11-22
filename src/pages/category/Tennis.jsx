@@ -6,7 +6,8 @@ import category_pic from "../../images/category/Tennis-Court-with-artificial-gra
 import data from "../../data/tennis.json";
 import { Link } from "react-router-dom";
 
-function Tennis() {
+function Tennis(props) {
+  const { setUserdata } = props;
   return (
     <div className="category">
       <div className="category__head">
@@ -18,13 +19,13 @@ function Tennis() {
         <div className="category__body__title">
           <h2>Tennis Coaches</h2>
           <Link to="/">
-              <Button props={"Back to categories"} />
+            <Button props={"Back to categories"} />
           </Link>
         </div>
         {data.map((each, index) => {
           return (
             <div key={index}>
-              <MentorList each={each} />
+              <MentorList each={each} setUserdata={setUserdata} />
             </div>
           );
         })}

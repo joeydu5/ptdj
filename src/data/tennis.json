@@ -46,8 +46,7 @@
       "very reasonable price3",
       "very reasonable price4"
     ]
-  }
-  ,
+  },
   {
     "id": 3,
     "category": "tennis",
@@ -62,7 +61,7 @@
       "email": "jennyjones@tennisport.com"
     },
     "qualification": "Certificate IV in Sport Coaching",
-    "intro": "Technique oriented approach to master the sport of tennis with focus on fitness. Easy and fast way to be a good player",
+    "intro": "Technique oriented approach to master the sport of tennis with focus on fitness. Easy and fast way to be a good player,Technique oriented approach to master the sport of tennis with focus on fitness. Easy and fast way to be a good player",
     "video": "https://www.youtube.com/embed/YqgcykDGB2A",
     "testimonial": [
       "excellent coach",
