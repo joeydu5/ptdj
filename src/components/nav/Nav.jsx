@@ -64,15 +64,6 @@ const Nav = () => {
           </svg>
         </li>
       </ul>
-      <div className="nav__register">
-        <Register
-          isRegisterOn={isRegisterOn}
-          setIsRegisterOn={setIsRegisterOn}
-        />
-      </div>
-      <div className="nav__login">
-        <Login isLoginClose={isLoginClose} setIsLoginClose={setIsLoginClose} />
-      </div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { auth } from "../../auth/firebase-config";
 import { onAuthStateChanged, signOut } from "@firebase/auth";
+import { Link } from "react-router-dom";
 
 import "./LoginOut.styles.scss";
 
@@ -24,24 +25,24 @@ function LoginOut(props) {
         </div>
       ) : (
         <div>
-          <p
-            onClick={() => {
-              setIsLoginClose(false);
-              setIsLoginOut(false);
-              setIsRegisterOn(true);
-            }}
-          >
-            Login
-          </p>
-          <p
-            onClick={() => {
-              setIsRegisterOn(false);
-              setIsLoginOut(false);
-              setIsLoginClose(true);
-            }}
-          >
-            Sign Up
-          </p>
+          <Link to="/login">
+            <p
+              onClick={() => {
+                setIsLoginOut(false);
+              }}
+            >
+              Login
+            </p>
+          </Link>
+          <Link to="signup">
+            <p
+              onClick={() => {
+                setIsLoginOut(false);
+              }}
+            >
+              Sign Up
+            </p>
+          </Link>
         </div>
       )}
     </div>

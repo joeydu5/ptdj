@@ -11,6 +11,8 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/footer";
 import Contact from "./pages/contact/contact";
 import Profile from "./pages/profile/Profile";
+import Login from "./pages/login/Login";
+import SignUp from "./pages/login/SignUp";
 
 function App() {
   const [userdata, setUserdata] = useState({
@@ -43,6 +45,8 @@ function App() {
         <Route path="/swimming" element={<Swimming />} />
         <Route path="/riding" element={<Ride />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/profile" element={<Profile userdata={userdata} />} />
       </Routes>
       <Footer />
