@@ -4,7 +4,7 @@ import { Carousel } from "@trendyol-js/react-carousel";
 import person from "./../../images/person.png";
 import { Link } from "react-router-dom";
 import data from "../../data/tennis.json";
-import HomeMentorList from "../../components/homeMentorList/homeMentorList";
+import HomeMentorList from "../../components/homeMentorList/HomeMentorList";
 
 const Home = () => {
   return (
