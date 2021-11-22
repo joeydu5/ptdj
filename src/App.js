@@ -3,10 +3,14 @@ import "./App.css";
 import Home from "./pages/home/Home";
 import Nav from "./components/nav/Nav";
 import Tennis from "./pages/category/Tennis";
+import Golf from "./pages/category/Golf";
+import Soccer from "./pages/category/Soccer";
+import Swimming from "./pages/category/Swimming";
+import Ride from "./pages/category/Ride";
 import { Route, Routes } from "react-router-dom";
-import Footer from "./components/footer/Footer";
-import Register from "./components/login/Register.jsx";
-// import Home2 from "./pages/home/Home2";
+import Footer from "./components/footer/footer";
+import Contact from "./pages/contact/contact";
+import Register from "./components/login/Register";
 
 function App() {
   return (
@@ -15,8 +19,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tennis" element={<Tennis />} />
-        {/* <Route path="/register" element={<Register />} /> */}
-        {/* <Route exact path="/" components={Home} /> */}
+        <Route path="/golf" element={<Golf />} />
+        <Route path="/soccer" element={<Soccer />} />
+        <Route path="/swimming" element={<Swimming />} />
+        <Route path="/riding" element={<Ride />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>

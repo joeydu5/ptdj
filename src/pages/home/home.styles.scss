@@ -37,7 +37,8 @@
   color: white;
 
   &__title {
-    padding-top: 100px;
+    padding-top: 50%;
+    text-align: center;
   }
 
   &__card {
@@ -91,16 +92,19 @@
 
 .coaches {
   margin: auto;
+  color: #15394e;
 
   &__title {
     padding-top: 90px;
+    text-align: center;
   }
 
   &__text {
+    text-align: center;
     padding-top: 30px;
     padding-bottom: 90px;
     width: 1000px;
-    padding-left: 30%;
+    margin: auto;
   }
 
   &__container {
@@ -117,6 +121,7 @@
     border: 2px solid #f4c300;
     border-radius: 20px;
     padding: 20px;
+    text-align: center;
 
     & h3,
     & p {
@@ -129,8 +134,69 @@
   }
 }
 
+.how {
+  background-image: url("./../../images/how_bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  object-fit: cover;
+  color: white;
+  text-align: center;
+  min-height: 731px;
+  box-sizing: border-box;
+
+  &__title {
+    padding-top: 100px;
+    padding-bottom: 32px;
+  }
+
+  &__subtitle {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    text-transform: capitalize;
+  }
+
+  &__item svg {
+    padding-bottom: 30px;
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-height: 250px;
+  background: rgba(0, 35, 14, 0.6);
+
+  &__item {
+    position: relative;
+  }
+
+  &__number {
+    font-size: 160px;
+    color: rgba(9, 0, 0, 0.6);
+    opacity: 0.3;
+    font-weight: bold;
+  }
+
+  &__description {
+    color: white;
+    width: 200px;
+    font-size: 24px;
+    position: absolute;
+    top: 110px;
+    left: 40px;
+  }
+}
+
 .testiomonials {
   padding: 119px 50px 100px;
+  text-align: center;
 
   &__title {
     padding-bottom: 50px;

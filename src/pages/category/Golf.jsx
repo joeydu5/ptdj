@@ -2,21 +2,21 @@ import React from "react";
 import Button from "../../components/button/button";
 import MentorList from "../../components/category/MentorList";
 import "./category.styles.scss";
-import category_pic from "../../images/category/Tennis-Court-with-artificial-grass.png";
-import data from "../../data/tennis.json";
+import head_pic from "../../images/category/golf-head.png";
+import data from "../../data/golf.json";
 import { Link } from "react-router-dom";
 
-function Tennis() {
+function Golf() {
   return (
     <div className="category">
       <div className="category__head">
-        <h1>TENNIS</h1>
-        <img src={category_pic} alt="category_head_pic" />
+        <h1>Golf</h1>
+        <img src={head_pic} alt="category_pic" />
       </div>
 
       <div className="category__body">
         <div className="category__body__title">
-          <h2>Tennis Coaches</h2>
+          <h2>Golf Coaches</h2>
           <Link to="/">
               <Button props={"Back to categories"} />
           </Link>
@@ -33,4 +33,4 @@ function Tennis() {
   );
 }
 
-export default Tennis;
+export default Golf;
