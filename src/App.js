@@ -38,11 +38,17 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tennis" element={<Tennis setUserdata={setUserdata} />} />
-        <Route path="/golf" element={<Golf />} />
-        <Route path="/soccer" element={<Soccer />} />
-        <Route path="/swimming" element={<Swimming />} />
-        <Route path="/riding" element={<Ride />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/golf" element={<Golf setUserdata={setUserdata} />} />
+        <Route path="/soccer" element={<Soccer setUserdata={setUserdata} />} />
+        <Route
+          path="/swimming"
+          element={<Swimming setUserdata={setUserdata} />}
+        />
+        <Route path="/riding" element={<Ride setUserdata={setUserdata} />} />
+        <Route
+          path="/contact"
+          element={<Contact setUserdata={setUserdata} />}
+        />
         <Route path="/profile" element={<Profile userdata={userdata} />} />
       </Routes>
       <Footer />

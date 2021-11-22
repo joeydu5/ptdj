@@ -1,17 +1,19 @@
 .nav {
   padding: 15px 100px;
   background-color: black;
-
-  &__logo {
-    padding-top: 15px;
-  }
+  display: flex;
+  justify-content: space-between;
 
   &__list {
+    width: 30%;
     display: flex;
     justify-content: space-between;
-    // vertical-align: middle;
     align-items: center;
     color: white;
+  }
+
+  &__item {
+    margin-left: 30px;
   }
 
   &__register {

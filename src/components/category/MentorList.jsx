@@ -5,7 +5,7 @@ import "./MetorList.styles.scss";
 function MentorList(props) {
   const { setUserdata } = props;
 
-  const { image, firstname, star, city, intro, rates } = props.each;
+  const { image, firstname, lastname, star, city, intro, rates } = props.each;
   return (
     <div className="mentorlist">
       <div className="mentorlist__left">
@@ -13,7 +13,7 @@ function MentorList(props) {
       </div>
       <div className="mentorlist__right">
         <div className="mentorlist__right__head">
-          <h2>{firstname}</h2>
+          <h2>{firstname} {lastname}</h2>
           <h2>star:{star}</h2>
           <h2>{city}</h2>
         </div>
