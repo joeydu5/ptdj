@@ -6,7 +6,7 @@
     "lastname": "Taylor",
     "star": 5,
     "image": "https://i.ibb.co/McpFmXG/1-golf.png",
-    "rates": "40$/h",
+    "rates": "40AUD",
     "city": "Glebe",
     "contact": {
       "mobile": "04594635254",
@@ -30,7 +30,7 @@
     "lastname": "Brown",
     "star": 4.5,
     "image": "https://i.ibb.co/DCm4wYh/2-golf.png",
-    "rates": "34$/h",
+    "rates": "34AUD",
     "city": "Darlinghurst",
     "contact": {
       "mobile": "04594635254",
@@ -46,8 +46,7 @@
       "very reasonable price3",
       "very reasonable price4"
     ]
-  }
-  ,
+  },
   {
     "id": 3,
     "category": "golf",
@@ -55,7 +54,7 @@
     "lastname": "Wilson",
     "star": 4,
     "image": "https://i.ibb.co/J7dHbt7/3-golf.png",
-    "rates": "20$/h",
+    "rates": "20AUD",
     "city": "Millers Point",
     "contact": {
       "mobile": "04594635254",

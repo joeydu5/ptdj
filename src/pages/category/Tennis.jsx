@@ -19,7 +19,7 @@ function Tennis(props) {
         <div className="category__body__title">
           <h2>Tennis Coaches</h2>
           <Link to="/">
-            <Button props={"Back to categories"} />
+            <h3>Back to Category</h3>
           </Link>
         </div>
         {data.map((each, index) => {
