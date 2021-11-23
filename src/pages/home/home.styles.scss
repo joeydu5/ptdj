@@ -1,24 +1,34 @@
+// * {
+//   width: 1440px;
+// }
+.homepage {
+  width: 1440px;
+}
 .hero {
-  height: 900px;
-  background-color: #515151;
-  background-image: url("./../../images/hero.png");
+  width: 100%;
+  height: 600px;
+  background-color: #fff;
+  // background-color: #515151;
+  background-image: url("./../../images/newhero.png");
   background-repeat: no-repeat;
-  background-position: center center;
-  color: white;
+  background-size: contain;
+  background-position: center bottom;
+  color: #006a29;
   text-align: center;
 
   &__input {
-    margin-top: 190px;
-    width: 610px;
-    height: 64px;
+    margin-top: 80px;
+    width: 400px;
+    height: 35px;
     border: none;
-    background: #f5f5fa;
+    // background: #f5f5fa;
     box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5),
       inset 2px 2px 4px rgba(170, 170, 204, 0.25),
       inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #ffffff;
     border-radius: 40px;
     outline: none;
     padding: 16px 34px;
+    background-color: rgb(199, 245, 214);
   }
 
   &__title {
@@ -29,22 +39,55 @@
   &__text {
     margin-top: 15px;
     font-size: 36px;
+    font-weight: 300;
   }
 }
 
 .slider {
-  padding: 30px 80px;
-  color: white;
+  width: 100%;
+  height: 420px;
+  padding-top: 10px;
+  background-color: #033717;
+  text-align: center;
+
+  h2 {
+    display: block;
+    margin: 30px 0px;
+    color: white;
+    font-size: 30px;
+  }
+
+  &__inner {
+    width: 85%;
+    text-align: center;
+    margin: auto;
+    background-color: #fff;
+    padding: 25px 15px;
+  }
 
   &__title {
-    padding-top: 50%;
+    // padding-top: 50%;
     text-align: center;
+    font-size: 30px;
+    background-color: gold;
+    height: 80px;
+    line-height: 80px;
+    bottom: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #033717;
+    border-radius-bottom-left: 8px;
+
+    // left: 50%;
+    // transform: translateX(-50%);
   }
 
   &__card {
     width: 223px;
     height: 280px;
     border-radius: 8px;
+    position: relative;
 
     &--surfing {
       background-image: url("./../../images/surfing-card.png");

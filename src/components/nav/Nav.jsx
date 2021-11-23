@@ -4,6 +4,7 @@ import { onAuthStateChanged } from "@firebase/auth";
 import LoginOut from "../login/LoginOut";
 import { doc, onSnapshot } from "@firebase/firestore";
 import { db } from "../../auth/firebase-config";
+import logo from "../../images/new icon.png";
 // import Register from "../login/Register";
 // import Login from "../login/Login";
 import "./nav.styles.scss";
@@ -50,8 +51,11 @@ const Nav = () => {
           setIsLoginClose={setIsLoginClose}
         />
       )}
-      <ul className="nav__list">
-        <li>
+      <div className="nav__list">
+        <div className="nav__list__logodiv">
+          <a href="/">
+            <img src={logo} alt="logo pic" />
+          </a>
           <a href="/">
             <svg
               width="168"
@@ -66,17 +70,17 @@ const Nav = () => {
               />
             </svg>
           </a>
-        </li>
-        <li>
+        </div>
+        <div>
           <h2>{user ? "Welcome: " + userfirstname : ""}</h2>
-        </li>
+        </div>
 
         {/* <li><a href="/">Home</a></li> */}
 
         {/* <li>
           <a href="/contact">Contact us</a>
         </li> */}
-        <li
+        <div
           onClick={() => {
             setIsLoginOut(!isLoginOut);
           }}
@@ -93,8 +97,8 @@ const Nav = () => {
               fill="white"
             />
           </svg>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   );
 };

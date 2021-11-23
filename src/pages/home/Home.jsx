@@ -8,7 +8,7 @@ import HomeMentorList from "../../components/homeMentorList/HomeMentorList";
 
 const Home = () => {
   return (
-    <div>
+    <div className="homepage">
       <section className="hero">
         <input type="text" className="hero__input" placeholder="Search" />
         <h1 className="hero__title">FIND YOUR PERFECT COACH</h1>
@@ -19,41 +19,43 @@ const Home = () => {
 
       <section className="slider">
         <h2>What’s your discipline?</h2>
-        <Carousel show={5} slide={1} swiping={true}>
-          <div className="slider__card slider__card--surfing">
-            <h3 className="slider__title">Surfing</h3>
-          </div>
-
-          <Link to="/tennis">
-            <div className="slider__card slider__card--tennis">
-              <h3 className="slider__title">Tennis</h3>
+        <div className="slider__inner">
+          <Carousel show={5} slide={1} swiping={true}>
+            <div className="slider__card slider__card--surfing">
+              <h3 className="slider__title">Surfing</h3>
             </div>
-          </Link>
 
-          <Link to="/swimming">
-            <div className="slider__card slider__card--swimming">
-              <h3 className="slider__title">Swimming</h3>
-            </div>
-          </Link>
+            <Link to="/tennis">
+              <div className="slider__card slider__card--tennis">
+                <h3 className="slider__title">Tennis</h3>
+              </div>
+            </Link>
 
-          <Link to="/golf">
-            <div className="slider__card slider__card--golf">
-              <h3 className="slider__title">Golf</h3>
-            </div>
-          </Link>
+            <Link to="/swimming">
+              <div className="slider__card slider__card--swimming">
+                <h3 className="slider__title">Swimming</h3>
+              </div>
+            </Link>
 
-          <Link to="/soccer">
-            <div className="slider__card slider__card--soccer">
-              <h3 className="slider__title">Soccer</h3>
-            </div>
-          </Link>
+            <Link to="/golf">
+              <div className="slider__card slider__card--golf">
+                <h3 className="slider__title">Golf</h3>
+              </div>
+            </Link>
 
-          <Link to="/riding">
-            <div className="slider__card slider__card--riding">
-              <h3 className="slider__title">Horse-riding</h3>
-            </div>
-          </Link>
-        </Carousel>
+            <Link to="/soccer">
+              <div className="slider__card slider__card--soccer">
+                <h3 className="slider__title">Soccer</h3>
+              </div>
+            </Link>
+
+            <Link to="/riding">
+              <div className="slider__card slider__card--riding">
+                <h3 className="slider__title">Horse-riding</h3>
+              </div>
+            </Link>
+          </Carousel>
+        </div>
       </section>
 
       <section className="coaches">
