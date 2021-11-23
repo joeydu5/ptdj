@@ -6,7 +6,8 @@ import category_pic from "../../images/category/swimming-head.png";
 import data from "../../data/swimming.json";
 import { Link } from "react-router-dom";
 
-function Swimming() {
+function Swimming(props) {
+  const { setUserdata } = props;
   return (
     <div className="category">
       <div className="category__head">
@@ -24,7 +25,7 @@ function Swimming() {
         {data.map((each, index) => {
           return (
             <div key={index}>
-              <MentorList each={each} />
+              <MentorList each={each} setUserdata={setUserdata}/>
             </div>
           );
         })}

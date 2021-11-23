@@ -6,7 +6,8 @@ import category_pic from "../../images/category/soccer-head.png";
 import data from "../../data/soccer.json";
 import { Link } from "react-router-dom";
 
-function Soccer() {
+function Soccer(props) {
+  const { setUserdata } = props;
   return (
     <div className="category">
       <div className="category__head">
@@ -24,7 +25,7 @@ function Soccer() {
         {data.map((each, index) => {
           return (
             <div key={index}>
-              <MentorList each={each} />
+              <MentorList each={each} setUserdata={setUserdata}/>
             </div>
           );
         })}
