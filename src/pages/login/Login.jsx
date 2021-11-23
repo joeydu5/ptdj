@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../auth/firebase-config";
 import { useNavigate } from "react-router-dom";
+import Button from "../../components/button/button";
 import "./LoginSignUp.styles.scss";
 
 function Login() {
@@ -48,7 +49,8 @@ function Login() {
           </div>
 
           <div className="register_div" style={{ textAlign: "center" }}>
-            <button type="submit">Login</button>
+            <Button type="submit" props="Login"></Button>
+            {/* <button type="submit">Login</button> */}
           </div>
         </form>
       </div>

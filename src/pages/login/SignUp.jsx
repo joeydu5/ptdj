@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../auth/firebase-config.js";
 import { useNavigate } from "react-router";
 import { db } from "../../auth/firebase-config.js";
+import Button from "../../components/button/button.jsx";
 import "./LoginSignUp.styles.scss";
 import {
   getFirestore,
@@ -177,7 +178,8 @@ function SignUp(props) {
               <input type="password" name="cpassword" id="cpassword" />
             </div>
             <div className="register_div" style={{ textAlign: "center" }}>
-              <button type="submit">Register</button>
+              <Button type="submit" props="Sign Up" />
+              {/* <button type="submit">Register</button> */}
             </div>
           </form>
         </div>
