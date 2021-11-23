@@ -15,6 +15,7 @@ function LoginOut(props) {
 
   const logout = () => {
     signOut(auth);
+    setIsLoginOut(false);
   };
 
   return (

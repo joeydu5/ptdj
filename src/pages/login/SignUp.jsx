@@ -1,30 +1,94 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../auth/firebase-config.js";
 import { useNavigate } from "react-router";
+import { db } from "../../auth/firebase-config.js";
 import "./LoginSignUp.styles.scss";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  addDoc,
+  setDoc,
+  doc,
+} from "firebase/firestore";
 
 function SignUp(props) {
   const navigate = useNavigate();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const firstnameRef = useRef();
+  const lastnameRef = useRef();
+  const sportRef = useRef();
+  const mobileRef = useRef();
+
   //   const { isRegisterOn, setIsRegisterOn } = props;
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
+  const [firstname, setFirstname] = useState("");
 
   const signup = async (event) => {
     event.preventDefault();
-    try {
-      const user = await createUserWithEmailAndPassword(
-        auth,
-        registerEmail,
-        registerPassword
-      );
-      navigate("/");
+    // const db = getFirestore();
+    // const colRef = collection(db, "users");
 
-      console.log(user);
-    } catch (error) {
-      console.log(error.message);
-    }
+    createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        return setDoc(doc(db, "users", user.uid), {
+          firstname: firstnameRef.current.value,
+          lastname: lastnameRef.current.value,
+          email: emailRef.current.value,
+          mobile: mobileRef.current.value,
+          sport: sportRef.current.value,
+        });
+
+        // ...
+      })
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        // ..
+      });
+
+    // try {
+    //   const user = await createUserWithEmailAndPassword(
+    //     auth,
+    //     registerEmail,
+    //     registerPassword
+    //   );
+    //   // db.collection("users").doc(user.uid).set({
+    //   //  bio:singupForm['signup-bro'].value
+    //   // });
+
+    //   try {
+    //     // const docRef = doc(db, "users", user.uid);
+    //     // const payload = { firstname: firstname };
+    //     // await setDoc(docRef, payload);
+    //     const collectionRef = collection(db, "users");
+    //     const payload = {
+    //       firstname: firstnameRef.current.value,
+    //       lastname: lastnameRef.current.value,
+    //       email: emailRef.current.value,
+    //       mobile: mobileRef.current.value,
+    //       sport: sportRef.current.value,
+    //     };
+    //     await addDoc(collectionRef, payload);
+    //   } catch (error) {
+    //     console.log(error.message);
+    //   }
+
+    //   navigate("/");
+    //   console.log(user);
+    // } catch (error) {
+    //   console.log(error.message);
+    // }
   };
   //   const login = async () => {};
   //   const logout = async () => {};
@@ -39,7 +103,7 @@ function SignUp(props) {
               <label htmlFor="sport_cate">
                 What Sport do you need help with?
               </label>
-              <select name="sport_cate" id="sport_cate">
+              <select name="sport_cate" id="sport_cate" ref={sportRef}>
                 <option value="badminton">Pick a Sport</option>
                 <option value="badminton">Badminton</option>
                 <option value="basketball">Basketball</option>
@@ -57,12 +121,22 @@ function SignUp(props) {
 
             <div className="register_div">
               <label htmlFor="firstname">First Name:</label>
-              <input type="text" name="firstname" id="firstname" />
+              <input
+                type="text"
+                name="firstname"
+                id="firstname"
+                ref={firstnameRef}
+              />
             </div>
 
             <div className="register_div">
               <label htmlFor="lastname">Last Name:</label>
-              <input type="text" name="lastname" id="lastname" />
+              <input
+                type="text"
+                name="lastname"
+                id="lastname"
+                ref={lastnameRef}
+              />
             </div>
 
             <div className="register_div">
@@ -71,6 +145,7 @@ function SignUp(props) {
                 type="email"
                 name="email"
                 id="email"
+                ref={emailRef}
                 placeholder="123@gmail.com"
                 onChange={(event) => {
                   setRegisterEmail(event.target.value);
@@ -80,7 +155,7 @@ function SignUp(props) {
 
             <div className="register_div">
               <label htmlFor="mobile">Contact Number:</label>
-              <input type="number" name="mobile" id="mobile" />
+              <input type="number" name="mobile" id="mobile" ref={mobileRef} />
             </div>
 
             <div className="register_div">
@@ -90,6 +165,7 @@ function SignUp(props) {
                 name="password"
                 id="password"
                 placeholder="Your Password"
+                ref={passwordRef}
                 onChange={(event) => {
                   setRegisterPassword(event.target.value);
                 }}

@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { auth } from "../../auth/firebase-config";
 import { onAuthStateChanged } from "@firebase/auth";
 import LoginOut from "../login/LoginOut";
-import Register from "../login/Register";
-import Login from "../login/Login";
+import { doc, onSnapshot } from "@firebase/firestore";
+import { db } from "../../auth/firebase-config";
+// import Register from "../login/Register";
+// import Login from "../login/Login";
 import "./nav.styles.scss";
 
 const Nav = () => {
@@ -11,11 +13,32 @@ const Nav = () => {
   const [isLoginOut, setIsLoginOut] = useState(false);
   const [isRegisterOn, setIsRegisterOn] = useState(true);
   const [isLoginClose, setIsLoginClose] = useState(true);
+  const [userfirstname, setUserfirstname] = useState("");
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
-  console.log(isLoginOut);
+  const user2 = auth.currentUser;
+  console.log(user2);
+  if (user2) {
+    const docRef = doc(db, "users", user2.uid);
+    onSnapshot(docRef, (doc) => {
+      console.log(doc.data(), doc.id);
+      setUserfirstname(doc.data().firstname);
+    });
+  }
+
+  // const id = user.uid;
+  // const docRef = doc(db, "users", user2.uid);
+  // getDoc(docRef)
+  //   .then((doc) => {
+  //     console.log(doc.data(), doc.id);
+  //     setUserfirstname(doc.data().firstname);
+  //   })
+  //   .catch((err) => console(err));
+  // onSnapshot(docRef, (doc) => {
+  //   console.log(doc.data(), doc.id);
+  // });
 
   return (
     <div className="nav">
@@ -43,14 +66,16 @@ const Nav = () => {
               />
             </svg>
           </a>
-          </li>
+        </li>
+        <li>
+          <h2>{user ? "Welcome: " + userfirstname : ""}</h2>
+        </li>
 
-          <li><a href="/">Home</a></li>
+        {/* <li><a href="/">Home</a></li> */}
 
-          <li><a href="/contact">Contact us</a></li>
-      </ul>
-      <ul>
-        <li> {user ? "Welcome:" + user.email : ""}</li>
+        {/* <li>
+          <a href="/contact">Contact us</a>
+        </li> */}
         <li
           onClick={() => {
             setIsLoginOut(!isLoginOut);

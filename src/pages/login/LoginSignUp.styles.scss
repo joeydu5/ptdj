@@ -1,0 +1,113 @@
+.hide {
+  display: none;
+}
+
+.register {
+  // display: none;
+  width: 90%;
+  margin: auto;
+  min-height: 800px;
+  // background-color: lightblue;
+
+  &__delete {
+    // right: 150px;
+    right: 50px;
+    position: absolute;
+    // background-color: lightsalmon;
+  }
+
+  form {
+    background-color: #e5e5e5;
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+    max-width: 739px;
+    border-radius: 20px;
+    position: relative;
+
+    .register_div {
+      //   background-color: lightcyan;
+      max-width: 300px;
+      margin: auto;
+      width: 50%;
+      margin-top: 10px;
+      label {
+        display: block;
+        width: 300px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        color: #15394e;
+        font-weight: 300;
+      }
+      select {
+        height: 40px;
+        width: 300px;
+        border-radius: 5px;
+        color: lightgrey;
+        font-weight: 300;
+        font-size: 18px;
+      }
+      input {
+        height: 40px;
+        width: 300px;
+        border-radius: 5px;
+      }
+    }
+    button {
+      padding: 8px 12px;
+      background-color: #009f3d;
+      border-radius: 5px;
+      font-size: 20px;
+      color: #fff;
+      margin: auto;
+    }
+  }
+}
+
+.login {
+  width: 380px;
+  height: 280px;
+  background-color: #fff;
+  text-align: center;
+  padding: 25px 5px;
+  border-radius: 15px;
+  margin: auto;
+  position: relative;
+
+  .delete1 {
+    // right: 150px;
+    right: 20px;
+    top: 2px;
+    position: absolute;
+    // background-color: lightsalmon;
+    width: 35px;
+  }
+  form {
+    // background-color: yellowgreen;
+    padding: 20px;
+  }
+
+  div {
+    //   background-color: lightcyan;
+    max-width: 250px;
+    margin: auto;
+    width: 80%;
+    margin-top: 15px;
+    input {
+      height: 40px;
+      width: 250px;
+      border-radius: 5px;
+    }
+  }
+
+  button {
+    padding: 8px 12px;
+    background-color: #009f3d;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #fff;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
