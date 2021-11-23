@@ -60,14 +60,17 @@ const Home = () => {
       </section>
 
       <section className="coaches">
-        <h2 className="coaches__title"> ALL STAR COACHES</h2>
-        <p className="coaches__text">
+        <h2 className="coaches__title" style={{ fontSize: "30px" }}>
+          {" "}
+          ALL STAR COACHES
+        </h2>
+        <p className="coaches__text" style={{ fontSize: "22px" }}>
           With MentorMe you can be assured to find the best of the best coaches
           for your lessons. We only work with the highest quality instructors
           available from around the country. Browse our all-star coach profiles
           to find the perfect mentor for you. If you need any help in deciding
           who would be a good fit for your needs, get in touch- we'll be happy
-          to help! .{" "}
+          to help! .
         </p>
 
         <div className="coaches__container">

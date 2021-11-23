@@ -9,7 +9,7 @@ function HomeMentorList(props) {
     <div className="coaches__card">
       <img src={image} alt={firstname} />
       <h3>{firstname}</h3>
-      <p>{intro}</p>
+      <p style={{ fontSize: "18px" }}>{intro.substring(0, 135)}....</p>
       <Link to="/tennis">
         <Button props="READ MORE" />
       </Link>
