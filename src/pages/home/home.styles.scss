@@ -3,6 +3,7 @@
 // }
 .homepage {
   width: 1440px;
+  margin: auto;
 }
 .hero {
   width: 100%;
@@ -34,6 +35,8 @@
   &__title {
     padding-top: 32px;
     font-size: 48px;
+    border-radius: 40px;
+    // border-bottom-left-radius: 40px;
   }
 
   &__text {
