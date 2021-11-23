@@ -81,9 +81,9 @@ const Nav = () => {
           <a href="/contact">Contact Us</a> */}
         </div>
 
-        <div>
+        {/* <div>
           <h2>{user && userfirstname}</h2>
-        </div>
+        </div> */}
 
         {/* <li><a href="/">Home</a></li> */}
 
@@ -94,8 +94,15 @@ const Nav = () => {
           onClick={() => {
             setIsLoginOut(!isLoginOut);
           }}
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
         >
-          <h2>{user && userfirstname}</h2>
+          <h2 style={{ marginRight: "20px" }}>
+            {user && "Hi , " + userfirstname}
+          </h2>
           <svg
             width="55"
             height="56"
