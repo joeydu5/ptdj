@@ -80,10 +80,10 @@ const Nav = () => {
           {/* <a href="/about">About Us</a>
           <a href="/contact">Contact Us</a> */}
         </div>
- main
-        <div>
+
+        {/* <div>
           <h2>{user ? "Welcome: " + userfirstname : ""}</h2>
-        </div>
+        </div> */}
 
         {/* <div>
           <h2>{user && userfirstname}</h2>
@@ -94,7 +94,7 @@ const Nav = () => {
         {/* <li>
           <a href="/contact">Contact us</a>
         </li> */}
-main
+
         <div
           onClick={() => {
             setIsLoginOut(!isLoginOut);
