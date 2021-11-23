@@ -74,12 +74,6 @@ const Nav = () => {
         <div>
           <h2>{user ? "Welcome: " + userfirstname : ""}</h2>
         </div>
-
-        {/* <li><a href="/">Home</a></li> */}
-
-        {/* <li>
-          <a href="/contact">Contact us</a>
-        </li> */}
         <div
           onClick={() => {
             setIsLoginOut(!isLoginOut);
