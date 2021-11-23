@@ -6,7 +6,8 @@ import head_pic from "../../images/category/golf-head.png";
 import data from "../../data/golf.json";
 import { Link } from "react-router-dom";
 
-function Golf() {
+function Golf(props) {
+  const { setUserdata } = props;
   return (
     <div className="category">
       <div className="category__head">
@@ -24,7 +25,7 @@ function Golf() {
         {data.map((each, index) => {
           return (
             <div key={index}>
-              <MentorList each={each} />
+              <MentorList each={each} setUserdata={setUserdata}/>
             </div>
           );
         })}

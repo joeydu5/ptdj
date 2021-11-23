@@ -32,6 +32,10 @@ function Profile(props) {
           </div>
           <div className="left__contact">
             <h3 className="profile__title">Contact:</h3>
+
+            <div className="container">
+<svg
+
             <div
               style={{
                 display: "flex",
@@ -41,6 +45,7 @@ function Profile(props) {
               }}
             >
               <svg
+
                 width="34"
                 height="34"
                 viewBox="0 0 23 24"
@@ -52,10 +57,17 @@ function Profile(props) {
                   fill="#15394E"
                 />
               </svg>
+
+              <p className="container__text">{contact.mobile}</p>
+            </div>
+
+            <div className="container">
+
               : {contact.mobile}
             </div>
 
             <p>
+
               <svg
                 width="34"
                 height="34"
@@ -68,8 +80,15 @@ function Profile(props) {
                   fill="#15394E"
                 />
               </svg>
+
+
+              <p className="container__text">
+              {contact.email}
+
               : {contact.email}
+
             </p>
+            </div>
           </div>
 
           <div className="left__qualification">

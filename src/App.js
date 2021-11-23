@@ -10,6 +10,7 @@ import Ride from "./pages/category/Ride";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/footer";
 import Contact from "./pages/contact/contact";
+import About from "./pages/about/about";
 import Profile from "./pages/profile/Profile";
 import Login from "./pages/login/Login";
 import SignUp from "./pages/login/SignUp";
@@ -47,10 +48,8 @@ function App() {
           element={<Swimming setUserdata={setUserdata} />}
         />
         <Route path="/riding" element={<Ride setUserdata={setUserdata} />} />
-        <Route
-          path="/contact"
-          element={<Contact setUserdata={setUserdata} />}
-        />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
         <Route path="/profile" element={<Profile userdata={userdata} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

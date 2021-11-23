@@ -28,7 +28,7 @@ const Footer = () => {
           <p>Home</p>
           <p>Find A Coach</p>
           <p>Become A Coach</p>
-          <p>About Us</p>
+          <Link to="/about"><p>About Us</p></Link>
           <p>How It Works</p>
           <Link to="/contact">
             <p>Contact Us</p>
