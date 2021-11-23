@@ -6,7 +6,7 @@
     "lastname": "Davies",
     "star": 5,
     "image": "https://i.ibb.co/yYVpcJm/1-ride.png",
-    "rates": "15$/h",
+    "rates": "15AUD",
     "city": "Liverpool",
     "contact": {
       "mobile": "04594635254",
@@ -30,7 +30,7 @@
     "lastname": "Fletcher",
     "star": 4.5,
     "image": "https://i.ibb.co/G9RcLVN/2-ride.png",
-    "rates": "34$/h",
+    "rates": "34AUD",
     "city": "Berowra",
     "contact": {
       "mobile": "04594635254",
@@ -46,8 +46,7 @@
       "I always felt that my greatest asset was not my physical ability, it was my mental ability.",
       "very reasonable price!"
     ]
-  }
-  ,
+  },
   {
     "id": 3,
     "category": "Horse riding",
@@ -55,7 +54,7 @@
     "lastname": "Harris",
     "star": 4,
     "image": "https://i.ibb.co/nDb26n2/3-ride.png",
-    "rates": "20$/h",
+    "rates": "20AUD",
     "city": "Richmond",
     "contact": {
       "mobile": "04594635254",

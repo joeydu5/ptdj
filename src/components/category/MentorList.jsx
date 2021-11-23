@@ -13,13 +13,15 @@ function MentorList(props) {
       </div>
       <div className="mentorlist__right">
         <div className="mentorlist__right__head">
-          <h2>{firstname} {lastname}</h2>
+          <h2>
+            {firstname} {lastname}
+          </h2>
           <h2>star:{star}</h2>
           <h2>{city}</h2>
         </div>
         <p>{intro.substring(0, 200)}....</p>
         <div className="mentorlist__right__bottom">
-          <h3>Rate: {rates}</h3>
+          <h3 style={{ color: "#0085C7" }}>Rate: {rates}</h3>
           <p className="mentorlist__right__bottom__link1">SEND EMAIL</p>
           <Link to="/profile">
             <p
