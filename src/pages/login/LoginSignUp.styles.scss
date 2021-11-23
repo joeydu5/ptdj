@@ -2,12 +2,43 @@
   display: none;
 }
 
+.grayfont {
+  color: gray;
+}
+
 .register {
   // display: none;
   width: 90%;
+  max-width: 730px;
   margin: auto;
   min-height: 800px;
-  // background-color: lightblue;
+  background-color: lightblue;
+  border-radius: 20px;
+  padding: 20px;
+
+  &__head {
+    width: 80%;
+    // background-color: lime;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    border-bottom: 1px solid grey;
+    // padding: 15px 0px;
+
+    &__coach {
+      text-align: center;
+      width: 50%;
+      border-right: 1px solid grey;
+      padding: 15px 0px;
+    }
+
+    &__student {
+      width: 50%;
+      text-align: center;
+      padding: 15px 0px;
+    }
+  }
 
   &__delete {
     // right: 150px;
@@ -17,9 +48,9 @@
   }
 
   form {
-    background-color: #e5e5e5;
+    // background-color: #e5e5e5;
     width: 90%;
-    padding: 20px;
+    // padding: 20px;
     margin: auto;
     max-width: 739px;
     border-radius: 20px;

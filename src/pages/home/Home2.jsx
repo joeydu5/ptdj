@@ -2,7 +2,6 @@ import React from "react";
 import "./home.styles.scss";
 import { Carousel } from "@trendyol-js/react-carousel";
 import person from "./../../images/person.png";
-import person2 from "./../../images/female-person.png";
 import { Link } from "react-router-dom";
 import data from "../../data/tennis.json";
 import HomeMentorList from "../../components/homeMentorList/HomeMentorList";
@@ -62,12 +61,13 @@ const Home = () => {
       <section className="coaches">
         <h2 className="coaches__title"> ALL STAR COACHES</h2>
         <p className="coaches__text">
-          With MentorMe you can be assured to find the best of the best coaches
-          for your lessons. We only work with the highest quality instructors
-          available from around the country. Browse our all-star coach profiles
-          to find the perfect mentor for you. If you need any help in deciding
-          who would be a good fit for your needs, get in touch- we'll be happy
-          to help! .{" "}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisi
+          lacus, dignissim et augue sagittis, bibendum pretium felis. Integer
+          auctor commodo ex quis pretium. Vestibulum ante ipsum primis in
+          faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum
+          suscipit ipsum id sem commodo malesuada. Sed pretium tristique erat,
+          id maximus tortor gravida sit amet. Aenean efficitur neque at urna
+          cursus scelerisque.{" "}
         </p>
 
         <div className="coaches__container">
@@ -460,36 +460,36 @@ const Home = () => {
           <div className="testiomonials__card">
             <img src={person} alt="person" />
             <p className="testiomonials__text">
-              “I had the best experience training with Mitchell my Tennis coach,
-              thanks Mitchell!” -Ryan
-            </p>
-          </div>
-          <div className="testiomonials__card">
-            <img src={person2} alt="person" />
-            <p className="testiomonials__text">
-              “My tennis has improved SO much since I have been having some
-              mentoring with Jessica my tennis coach” -Selena
+              “I had the best experience training with Ben my Tennis coach,
+              thanks Ben!”
             </p>
           </div>
           <div className="testiomonials__card">
             <img src={person} alt="person" />
             <p className="testiomonials__text">
-              “I had the best experience training with Mitchell my Tennis coach,
-              thanks Mitchell, you're awesome!" -Ryan
+              “I had the best experience training with Ben my Tennis coach,
+              thanks Ben!”
             </p>
           </div>
           <div className="testiomonials__card">
             <img src={person} alt="person" />
             <p className="testiomonials__text">
-              “My tennis has improved SO much since I have been having some
-              mentoring with Jessica my tennis coach” -Selena
+              “I had the best experience training with Ben my Tennis coach,
+              thanks Ben!”
             </p>
           </div>
           <div className="testiomonials__card">
             <img src={person} alt="person" />
             <p className="testiomonials__text">
-              “I had the best experience training with Jen my Tennis coach,
-              thanks Jen!”
+              “I had the best experience training with Ben my Tennis coach,
+              thanks Ben!”
+            </p>
+          </div>
+          <div className="testiomonials__card">
+            <img src={person} alt="person" />
+            <p className="testiomonials__text">
+              “I had the best experience training with Ben my Tennis coach,
+              thanks Ben!”
             </p>
           </div>
         </Carousel>

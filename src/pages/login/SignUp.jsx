@@ -25,6 +25,7 @@ function SignUp(props) {
   const mobileRef = useRef();
 
   //   const { isRegisterOn, setIsRegisterOn } = props;
+  const [isCoach, setIsCoach] = useState(true);
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [firstname, setFirstname] = useState("");
@@ -97,92 +98,205 @@ function SignUp(props) {
   return (
     <div>
       <div className={"register"}>
-        <div className="register__head"></div>
-        <div className="register__body">
-          <form onSubmit={signup}>
-            <div className="register_div">
-              <label htmlFor="sport_cate">
-                What Sport do you need help with?
-              </label>
-              <select name="sport_cate" id="sport_cate" ref={sportRef}>
-                <option value="badminton">Pick a Sport</option>
-                <option value="badminton">Badminton</option>
-                <option value="basketball">Basketball</option>
-                <option value="boxing">Boxing</option>
-                <option value="football">Football</option>
-                <option value="golf">Golf</option>
-                <option value="horseriding">Horse riding</option>
-                <option value="tennis">Tennis</option>
-                <option value="swimming">Swimming</option>
-                <option value="soccer">Soccer</option>
-                <option value="surfing">Surfing</option>
-                <option value="yoga">Yoga</option>
-              </select>
-            </div>
-
-            <div className="register_div">
-              <label htmlFor="firstname">First Name:</label>
-              <input
-                type="text"
-                name="firstname"
-                id="firstname"
-                ref={firstnameRef}
-              />
-            </div>
-
-            <div className="register_div">
-              <label htmlFor="lastname">Last Name:</label>
-              <input
-                type="text"
-                name="lastname"
-                id="lastname"
-                ref={lastnameRef}
-              />
-            </div>
-
-            <div className="register_div">
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                ref={emailRef}
-                placeholder="123@gmail.com"
-                onChange={(event) => {
-                  setRegisterEmail(event.target.value);
-                }}
-              />
-            </div>
-
-            <div className="register_div">
-              <label htmlFor="mobile">Contact Number:</label>
-              <input type="number" name="mobile" id="mobile" ref={mobileRef} />
-            </div>
-
-            <div className="register_div">
-              <label htmlFor="password">Password:</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Your Password"
-                ref={passwordRef}
-                onChange={(event) => {
-                  setRegisterPassword(event.target.value);
-                }}
-              />
-            </div>
-
-            <div className="register_div">
-              <label htmlFor="cpassword">Confirm Password:</label>
-              <input type="password" name="cpassword" id="cpassword" />
-            </div>
-            <div className="register_div" style={{ textAlign: "center" }}>
-              <Button type="submit" props="Sign Up" />
-              {/* <button type="submit">Register</button> */}
-            </div>
-          </form>
+        <div className="register__head">
+          <div
+            className={`register__head__coach ${!isCoach && "grayfont"}`}
+            onClick={() => {
+              setIsCoach(true);
+            }}
+          >
+            I'm a COACH
+          </div>
+          <div
+            className={`register__head__student ${isCoach && "grayfont"}`}
+            onClick={() => {
+              setIsCoach(false);
+            }}
+          >
+            I'm a STUDENT
+          </div>
         </div>
+        {isCoach ? (
+          <div className="register__body">
+            <form onSubmit={signup}>
+              <div className="register_div">
+                <label htmlFor="sport_cate">Choose a sport?</label>
+                <select name="sport_cate" id="sport_cate" ref={sportRef}>
+                  <option value="badminton">Pick a Sport</option>
+                  <option value="badminton">Badminton</option>
+                  <option value="basketball">Basketball</option>
+                  <option value="boxing">Boxing</option>
+                  <option value="football">Football</option>
+                  <option value="golf">Golf</option>
+                  <option value="horseriding">Horse riding</option>
+                  <option value="tennis">Tennis</option>
+                  <option value="swimming">Swimming</option>
+                  <option value="soccer">Soccer</option>
+                  <option value="surfing">Surfing</option>
+                  <option value="yoga">Yoga</option>
+                </select>
+              </div>
+
+              <div className="register_div">
+                <label htmlFor="firstname">First Name:</label>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  ref={firstnameRef}
+                />
+              </div>
+
+              <div className="register_div">
+                <label htmlFor="lastname">Last Name:</label>
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  ref={lastnameRef}
+                />
+              </div>
+
+              <div className="register_div">
+                <label htmlFor="email">Email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  ref={emailRef}
+                  placeholder="123@gmail.com"
+                  onChange={(event) => {
+                    setRegisterEmail(event.target.value);
+                  }}
+                />
+              </div>
+
+              <div className="register_div">
+                <label htmlFor="mobile">Contact Number:</label>
+                <input
+                  type="number"
+                  name="mobile"
+                  id="mobile"
+                  ref={mobileRef}
+                />
+              </div>
+
+              <div className="register_div">
+                <label htmlFor="password">Password:</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Your Password"
+                  ref={passwordRef}
+                  onChange={(event) => {
+                    setRegisterPassword(event.target.value);
+                  }}
+                />
+              </div>
+
+              <div className="register_div">
+                <label htmlFor="cpassword">Confirm Password:</label>
+                <input type="password" name="cpassword" id="cpassword" />
+              </div>
+              <div className="register_div" style={{ textAlign: "center" }}>
+                <Button type="submit" props="Sign Up" />
+                {/* <button type="submit">Register</button> */}
+              </div>
+            </form>
+          </div>
+        ) : (
+          <div className="register__body">
+            <form onSubmit={signup}>
+              <div className="register_div">
+                <label htmlFor="sport_cate">
+                  What Sport do you want to learn?
+                </label>
+                <select name="sport_cate" id="sport_cate" ref={sportRef}>
+                  <option value="badminton">Pick a Sport</option>
+                  <option value="badminton">Badminton</option>
+                  <option value="basketball">Basketball</option>
+                  <option value="boxing">Boxing</option>
+                  <option value="football">Football</option>
+                  <option value="golf">Golf</option>
+                  <option value="horseriding">Horse riding</option>
+                  <option value="tennis">Tennis</option>
+                  <option value="swimming">Swimming</option>
+                  <option value="soccer">Soccer</option>
+                  <option value="surfing">Surfing</option>
+                  <option value="yoga">Yoga</option>
+                </select>
+              </div>
+
+              <div className="register_div">
+                <label htmlFor="firstname">First Name:</label>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  ref={firstnameRef}
+                />
+              </div>
+
+              <div className="register_div">
+                <label htmlFor="lastname">Last Name:</label>
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  ref={lastnameRef}
+                />
+              </div>
+
+              <div className="register_div">
+                <label htmlFor="email">Email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  ref={emailRef}
+                  placeholder="123@gmail.com"
+                  onChange={(event) => {
+                    setRegisterEmail(event.target.value);
+                  }}
+                />
+              </div>
+
+              <div className="register_div">
+                <label htmlFor="mobile">Contact Number:</label>
+                <input
+                  type="number"
+                  name="mobile"
+                  id="mobile"
+                  ref={mobileRef}
+                />
+              </div>
+
+              <div className="register_div">
+                <label htmlFor="password">Password:</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Your Password"
+                  ref={passwordRef}
+                  onChange={(event) => {
+                    setRegisterPassword(event.target.value);
+                  }}
+                />
+              </div>
+
+              <div className="register_div">
+                <label htmlFor="cpassword">Confirm Password:</label>
+                <input type="password" name="cpassword" id="cpassword" />
+              </div>
+              <div className="register_div" style={{ textAlign: "center" }}>
+                <Button type="submit" props="Sign Up" />
+                {/* <button type="submit">Register</button> */}
+              </div>
+            </form>
+          </div>
+        )}
       </div>
     </div>
   );

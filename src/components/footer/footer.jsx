@@ -5,16 +5,20 @@ import SignFooter from "./../../images/sign_footer.svg";
 import insta from "./../../images/instagram.svg";
 import twitter from "./../../images/twitter.svg";
 import facebook from "./../../images/facebook.svg";
+import logo from "../../images/new icon.png";
 
 const Footer = () => {
   return (
     <section className="footer">
       <div className="footer__container">
-        <img src={SignFooter} alt="sign" />
+        <div className="footer__flexboxcol">
+          <img src={logo} alt="sign" className="footer__container__logo" />
+          <h2>Mentor Me</h2>
+        </div>
 
         <div className="footer__social">
           <h3>SOCIAL MEDIAS:</h3>
-          <img width="48px" height="48" src={facebook} alt="Facebook" />
+          <img width="48" height="48" src={facebook} alt="Facebook" />
           <img width="48" height="48" src={insta} alt="Instagram" />
           <img width="48" height="48" src={twitter} alt="Twitter" />
         </div>
